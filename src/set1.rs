@@ -22,16 +22,16 @@ mod tests {
 
     #[test]
     fn hex_to_b64_test() {
-        let expected_b64 = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t".to_string();
-        let converted_hex = hex_to_base64("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d".to_string());
+        let expected_b64 = String::from("SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t");
+        let converted_hex = hex_to_base64(String::from("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"));
         assert_eq!(converted_hex, expected_b64)
     }
 
     #[test]
     fn xor_test() {
-        let l = "1c0111001f010100061a024b53535009181c".to_string();
-        let r = "686974207468652062756c6c277320657965".to_string();
-        let exp = "746865206b696420646f6e277420706c6179".to_string();
+        let l = String::from("1c0111001f010100061a024b53535009181c");
+        let r = String::from("686974207468652062756c6c277320657965");
+        let exp = String::from("746865206b696420646f6e277420706c6179");
         assert_eq!(xor(l, r), exp)
     }
 }
