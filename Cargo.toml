@@ -4,3 +4,5 @@ version = "0.1.0"
 authors = ["Michael <michael@evojam.com>"]
 
 [dependencies]
+
+rustc-serialize = "0.3"
